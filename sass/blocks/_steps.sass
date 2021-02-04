@@ -1,0 +1,39 @@
+.step
+    &s
+        background-color: $bg-secondary
+    position: relative
+    text-align: center 
+    &__title
+        font-size: 18px
+    &__text
+        max-width: 160px
+        margin: auto
+        margin-bottom: 30px
+    &-block 
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+@media (max-width: 1199px)
+    .step
+        width: 33%
+        &-block
+            justify-content: space-around
+
+@media (max-width: 991px)
+    .step
+        flex-basis: 50%
+        &-block
+            margin: 0 30px
+        &__text
+        max-width: 200px
+@media (max-width: 991px)
+    .step
+        flex-basis: 50%
+        &__text
+        max-width: 200px
+
+@media (max-width: 768px)
+     .step
+        flex-basis: 100%
+        &__text
+            max-width: 300px

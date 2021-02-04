@@ -1,0 +1,25 @@
+.contacts
+    background-color: $bg-third
+    &-block
+        display: flex
+        justify-content: space-around
+        flex-wrap: wrap
+        &__item
+            text-align: center
+    &__image
+        margin-bottom: 25px 
+    &__text
+        font-size: 16px
+    &__link
+        text-decoration: none
+        color: $text-color
+    &__adress
+        font-style: normal
+@media (max-width: 768px)
+    .contacts
+        &-block__item
+            width: 100%
+            margin-bottom: 30px
+        &__adress
+            min-width: 200px
+            margin: auto

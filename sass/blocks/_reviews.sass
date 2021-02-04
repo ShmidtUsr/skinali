@@ -1,0 +1,60 @@
+.reviews
+    background-color: $bg-secondary
+    padding-bottom: 200px
+    &-slider
+        &-wrap
+            z-index: 5
+            position: relative
+            margin: auto
+            max-width: 470px 
+            text-align: center
+        &-arrows
+            z-index: -1
+            position: absolute 
+            display: flex
+            justify-content: space-between
+            top: 50%
+            width: 100%
+            transform: translateY(-100%)
+        &__item
+            text-align: center
+        &__image
+            display: block
+            width: 70px
+            height: 70px
+            border: 2px solid #6a99e9
+            border-radius: 50%
+            margin: 20px auto
+        &__text
+            position: relative
+            font-size: 15px
+            min-height: 130px
+            font-style: italic
+            padding: 20px
+            background-color: #ffffff
+            border-radius: 10px
+            margin: 0 30px 30px 30px
+            &:after
+                content: ''
+                position: absolute
+                bottom: -20px
+                left: 50%
+                transform: translateX(-50%)
+                border: 10px solid transparent
+                border-top: 10px solid #ffffff
+
+.review-arrow
+    background-color: transparent
+    border: none
+    &:focus
+        outline: none
+        cursor: pointer
+    &-left
+        transform: translateX(-200%)
+    &-right
+        transform: translateX(200%)
+@media (max-width: 576px)
+    .reviews
+        &-slider
+            &-arrows
+                display: none

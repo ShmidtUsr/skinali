@@ -1,0 +1,109 @@
+.navbar
+    z-index: 99
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1)
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    background-color: #ffffff
+    &-wrap
+        display: flex
+        align-items: center
+        justify-content: space-between
+   
+    &__mobile, &__landline 
+        text-align: right
+    &__phone
+        display: block
+        margin-bottom: 5px
+        font-size: 19px
+        +bold
+        text-decoration: none
+        color: $text-color
+    &__small-text
+        display: block
+        font-size: 14px 
+        color: $text-color-light
+        text-decoration: non
+.decoration
+    background-color: $primary !important
+    transition: 0.4s
+.menu
+    z-index: 0
+    position: fixed
+    top: 80px
+    width: 100%
+    left: 0
+    padding: 16px 0
+    background-color: $primary
+    transition: 0.2s
+    transform: translateY(-200%)
+    opacity: 0
+    &_active
+        z-index: 10
+        transform: translateY(0%)
+        opacity: 1
+    &__nav
+        display: flex
+        align-items: center
+        justify-content: space-around
+    &__link
+        text-decoration: none
+        text-transform: uppercase
+        color: #ffffff
+    &-button
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        background-color: transparent
+        border: none
+        border-right: 1px solid rgba(#510bba, 0.1)
+        border-left: 1px solid rgba(#510bba, 0.1) 
+        height: 80px
+        width: 70px 
+        &:hover
+            cursor: pointer
+        &:focus
+            outline: none
+        &__line 
+            display: block
+            width: 20px
+            height: 3px
+            background-color: #89a9eb
+            margin: 2px 0
+.logo 
+    &__text
+        display: block
+        margin-bottom: 
+        font-size: 20px
+        text-transform: uppercase
+        +bold
+        margin-bottom: 5px
+    &__description
+        display: block 
+        font-size: 14px
+        color: $text-color-light
+
+@media (max-width: 991px)
+    .menu
+        &__nav
+            font-size: 12px
+
+    .navbar
+        &__mobile, &__landline
+            display: none
+
+@media (max-width: 768px)
+    
+    .menu
+        top: 60px
+        &-button
+            height: 65px
+        &__nav
+            flex-direction: column
+        &__link
+            margin-bottom: 20px
+@media (max-width: 576px)
+    .logo
+        display: none

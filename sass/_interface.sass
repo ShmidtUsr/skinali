@@ -1,0 +1,91 @@
+body 
+    +light
+    color: $text-color
+img 
+    max-width: 100%
+.section
+    padding: 100px  
+    &-title
+        font-size: 30px
+        +bold
+        text-align: center
+        text-transform: uppercase
+        margin-top: 0px
+        margin-bottom: 100px
+.button-o
+    background-color: white
+    border: 2px solid $primary
+    padding: 17px 22px
+    font-size: 12px
+    text-transform: uppercase
+    +bold
+    text-decoration: none
+    color: $primary
+    &:hover
+        cursor: pointer
+.button 
+    border: none
+    text-transform: uppercase  
+    padding: 25px 45px
+    background-color: $primary
+    color: #ffffff
+    text-decoration: none
+    +bold
+    &:hover
+        cursor: pointer
+    &-fitting
+        color: $primary
+        background-color: #ffffff
+    &-like
+        padding-top: 5px
+        background-color: $primary
+        height: 30px
+        width: 30px
+        border: none
+    &-add
+        background-color: lighten($primary, 10%)
+        color: #ffffff
+         
+.bg-secondary
+    background-color: $bg-secondary  
+.input 
+    height: 80px
+    padding-left: 30px
+    border: 1px solid #ddd
+
+//Чекбоксы
+input[type="checkbox"]
+    display: none
+.light
+    display: flex
+    align-items: center
+    font-size: 17px
+    padding-right: 20px
+    &::before
+        content: ''
+        width: 25px
+        height: 25px
+        border: 1px solid #ddd
+        margin-right: 15px
+        transition: 0.3s
+    &:hover
+        cursor: pointer
+input[type="checkbox"]:checked + .light::before
+    background-color: $primary
+@media (max-width: 576px)
+    .button
+        font-size: 15px
+    .section
+        padding: 30px 0
+        &-title
+            font-size: 24px
+            margin-bottom: 50px
+        
+
+@media (max-width: 352px)
+    .button
+        font-size: 12px
+    .light
+        font-size: 13px
+        &::before
+            margin-right: 10px
